@@ -1,0 +1,87 @@
+Que1.Write a Python function to find the Max of three numbers.
+
+Ans:
+def maximum(a, b, c): 
+  
+    if (a >= b) and (a >= c): 
+        largest = a 
+  
+    elif (b >= a) and (b >= c): 
+        largest = b 
+    else: 
+        largest = c 
+          
+    return largest 
+a = 10
+b = 14
+c = 12
+print(maximum(a, b, c)) 
+
+Output: 14
+
+Que2.write a python function that checks whether a passed string is palindrome or not.
+
+Ans:
+def isPalindrome(s):
+    return s == s[::-1]
+s = "radar"
+ans = isPalindrome(s)
+ 
+if ans:
+    print("Yes")
+else:
+    print("No")
+
+Output: Yes
+
+Que3.Write a Python function that accepts a string and calculate the number of uppercase letters and lowercase letters.
+
+Ans:
+
+def up_low(s):      
+    u = sum(1 for i in s if i.isupper())
+    l = sum(1 for i in s if i.islower())
+    print( "No. of Upper case characters : %s And No. of Lower case characters : %s" % (u,l))
+
+up_low("ShuBhaM")
+
+Output:
+
+No. of Upper case characters : 3 And No. of Lower case characters : 4
+
+Que4.write a python function to sum all the numbers in a list.
+
+Ans:
+
+total = 0
+list1 = [11, 5, 17, 18, 23] 
+for ele in range(0, len(list1)):
+    total = total + list1[ele]
+print("Sum of all elements in given list: ", total)
+
+Output:  Sum of all elements in given list:  74
+
+Que5.Write a Python function to multiply all the numbers in a list.
+
+Ans:
+total = 1
+list1 = [1, 5, 7, 8, 3] 
+for ele in range(0, len(list1)):
+    total = total * list1[ele]
+print("Multiply of all number in given list: ", total)
+
+Output: Multiply of all number in given list:  840
+
+Que6.Write a Python function that takes a list and returns a new list with unique elements of the first list.
+
+Ans:
+def unique_list(l):
+  x = []
+  for a in l:
+    if a not in x:
+      x.append(a)
+  return x
+
+print(unique_list([1,2,3,3,3,3,4,5])) 
+
+Output: [1, 2, 3, 4, 5]
